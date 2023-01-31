@@ -42,7 +42,7 @@ function managerPrompts(){ return inquirer.prompt([{
 },
 ]).then(answers =>{
     fullTeam.push(
-   new Intern(answers.officeNo,answers.name, answers.employeeID, answers.email)
+   new Manager(answers.officeNo,answers.name, answers.employeeID, answers.email)
     )
     
 })} 
@@ -72,7 +72,7 @@ function engineerPrompts (){ return inquirer.prompt([{
     
   }]).then(answers =>{
     fullTeam.push(
-   new Intern(answers.engineerGithub,answers.engineerName, answers.engineerID, answers.engineerEmail)
+   new Engineer(answers.engineerGithub,answers.engineerName, answers.engineerID, answers.engineerEmail)
     )
     
 })}
